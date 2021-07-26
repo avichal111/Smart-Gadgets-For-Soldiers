@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smart Gadgets for Soldiers</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable=no>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div id="over_map">
+      <button class='button1' name = 'button1' value = "OK" type = "button" style='margin-right:10px' onclick="submitClick()"> Soldier 1 </button>
+      <button class='button1' name = 'button1' value = "OK" type = "button" style='margin-right:10px' onclick="history.go(0)"> Reset </button>
+    </div>
+    
+    <div id="over_map1">  
+      <div>
+          <span>Parameters:</span>
+      </div><br>
+   
+      <div>
+          <span id="oxy">Oxygen Saturation: Normal</span><br><br>
+      </div>
+   
+      <div>
+          <span id="heartb">Heart Rate: Normal </span><br><br>
+      </div>
+    
+      <div>
+          <span id="temper">Body Temperature: Normal</span><br><br>
+      </div>
+      
+      <div>
+        <span id="dng">Danger: NO</span><br><br>
+      </div>
+      
+      <div>
+      <span id="alert">Alert: Safe</span><br><br>
+      </div>
+      
+  </div>
+
+    <div id = "info" >
+      <ul style="list-style-type: none; padding:5px; padding-right:10px;">
+        <li id="oxygen"> SPO2: NaN</li>
+        <li id="heart"> Heartbeat: NaN</li>
+        <li id="temp"> Temperature: NaN</li>
+        <li id="danger"> Danger: NO </li>
+        
+      </ul>
+      </div>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+   <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmtMjSEJtcQsFsxP1MXpeEQ4BitEz7m3Y&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCOqH7-k4CL-pQ3X_AXZzqDypZildf4-J4",
+    authDomain: "smart-gadets-for-soldiers.firebaseapp.com",
+    projectId: "smart-gadets-for-soldiers",
+    storageBucket: "smart-gadets-for-soldiers.appspot.com",
+    messagingSenderId: "326312469250",
+    appId: "1:326312469250:web:ac2b41c20081fbfda4581b",
+    measurementId: "G-1KY9YWCTR2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+  </body>
+</html>
