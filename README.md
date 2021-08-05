@@ -13,4 +13,7 @@ Steps to run:
 <li>The data of all these parameters would be sent to google firebase database in realtime using arduino, sensors and wifi module. <br /></li>
 </ul>
 
+<strong> A snapshot of the realtime database:</strong> <br /> 
+<br />
+<img src="database.JPG" alt="Real Time Database"/>
 
